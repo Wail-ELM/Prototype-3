@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import FileUploader from './components/FileUploader';
-import ModelList from './components/ModelList';
+// src/App.js
+import React, { useState } from "react";
+import FileUploader from "./components/FileUploader";
+import ModelList from "./components/ModelList";
+import ModelViewer from "./components/ModelViewer";
 
 function App() {
   const [selectedModel, setSelectedModel] = useState(null);
+  const [reloadModels, setReloadModels] = useState(false); 
+
+  
+  const refreshModels = () => {
+    setReloadModels((prev) => !prev); 
+  };
 
   return (
     <div className="App">
@@ -12,13 +20,13 @@ function App() {
       </header>
       <div className="main-content">
         {}
-        <FileUploader onUploadSuccess={(data) => console.log('File uploaded:', data)} />
+        <FileUploader onUploadSuccess={refreshModels} />
 
         {}
-        <ModelList onSelectModel={setSelectedModel} />
+        <ModelList onSelectModel={setSelectedModel} reloadModels={reloadModels} />
 
         {}
-        {selectedModel && <p>Modèle sélectionné : {selectedModel}</p>}
+        {selectedModel && <ModelViewer modelName={selectedModel} />}
       </div>
     </div>
   );
