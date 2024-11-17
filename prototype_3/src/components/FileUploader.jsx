@@ -5,17 +5,18 @@ function FileUploader({ onUploadSuccess }) {
   const [file, setFile] = useState(null);
 
   const handleFileChange = (event) => {
-    setFile(event.target.files[0]); 
-    console.log(event.target.files[0]);
+    setFile(event.target.files[0]);
+    console.log(event.target.files[0]); 
   };
 
   const handleUpload = async () => {
     if (file) {
       const formData = new FormData();
-      formData.append('model', file); 
+      formData.append('model', file);
       try {
         const response = await axios.post('http://localhost:5000/upload', formData);
-        onUploadSuccess(response.data); 
+        console.log("File uploaded:", response.data); 
+        onUploadSuccess(); 
       } catch (error) {
         console.error('File upload failed', error);
       }

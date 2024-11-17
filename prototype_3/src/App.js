@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from "react";
 import FileUploader from "./components/FileUploader";
 import ModelList from "./components/ModelList";
@@ -26,7 +25,7 @@ function App() {
         <ModelList onSelectModel={setSelectedModel} reloadModels={reloadModels} />
 
         {}
-        {selectedModel && <ModelViewer modelName={selectedModel} />}
+        {selectedModel && <ModelViewer model={selectedModel} />}
       </div>
     </div>
   );
