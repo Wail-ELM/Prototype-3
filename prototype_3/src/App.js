@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import FileUploader from "./components/FileUploader";
 import ModelList from "./components/ModelList";
 import ModelViewer from "./components/ModelViewer";
-import StaticRoom from "./components/StaticRoom";
+import InteractiveRoom from "./components/InteractiveRoom";
+// import './styles.css'
 
 function App() {
   const [selectedModel, setSelectedModel] = useState(null);
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>3D Object Viewer</h1>
+        <h1>Prototype 3 - 3D Model viewer</h1>
         {selectedModel ? (
           <h2>Mode : Visualisation 3D Model </h2>
         ) : (
@@ -29,7 +30,7 @@ function App() {
         {selectedModel ? (
           <ModelViewer model={selectedModel} />
         ) : (
-          <StaticRoom />
+          <InteractiveRoom />
         )}
       </div>
     </div>

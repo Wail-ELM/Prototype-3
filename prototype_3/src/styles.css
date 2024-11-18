@@ -1,0 +1,142 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb; 
+  color: #333; 
+}
+
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1a202c; 
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4a5568; 
+  margin-bottom: 20px;
+}
+
+
+.main-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.file-uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.custom-file-label {
+  background-color: #3182ce; 
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.custom-file-label:hover {
+  background-color: #2b6cb0;
+}
+
+.file-uploader button {
+  padding: 10px 15px;
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.file-uploader button:hover {
+  background-color: #218838;
+}
+
+
+.model-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.model-item {
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1a202c;
+  /* transition: all 0.3s ease; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.model-item:hover {
+  background: #edf2f7;
+  transform: translateY(-3px); 
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); 
+}
+
+
+.viewer-container {
+  width: 100%;
+  height: 95vh; 
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  position: fixed  ;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+
+.controls button:hover {
+  background-color: #2b6cb0;
+}
+
